@@ -294,7 +294,7 @@ FUTURE ENHANCEMENTS:
 • Implement actual preview functionality
 • Add user accounts/bookmarks
 • Add analytics tracking
-�� Add dark mode toggle
+• Add dark mode toggle
 • Add more tools
 • Add API integration
 • Add back-end processing

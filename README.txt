@@ -63,7 +63,7 @@ previewtools.github.io/
 │   ├── component-loader.js       Component loading
 │   └── slider.js                 Slider functionality
 ├── components/
-���   ├── header.html               Navigation header
+│   ├── header.html               Navigation header
 │   ├── footer.html               Footer with widgets
 │   ├── sidebar.html              Sidebar navigation
 │   └── all-tools.html            Tools grid

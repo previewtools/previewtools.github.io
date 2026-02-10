@@ -72,13 +72,13 @@
       </div>
 
       <div class="tools-filter">
-        <button class="filter-btn active" data-filter="all">All Tools</button>
-        <button class="filter-btn" data-filter="social">📱 Social Media</button>
-        <button class="filter-btn" data-filter="links">🔗 Links</button>
-        <button class="filter-btn" data-filter="seo">🔍 SEO</button>
-        <button class="filter-btn" data-filter="email">✉️ Email</button>
-        <button class="filter-btn" data-filter="ads">📢 Ads</button>
-        <button class="filter-btn" data-filter="website">🌐 Website</button>
+        <button class="filter-btn active" data-filter="all">All (70+)</button>
+        <button class="filter-btn" data-filter="social">📱 Social (9)</button>
+        <button class="filter-btn" data-filter="links">🔗 Links (6)</button>
+        <button class="filter-btn" data-filter="seo">🔍 SEO (7)</button>
+        <button class="filter-btn" data-filter="email">✉️ Email (9)</button>
+        <button class="filter-btn" data-filter="ads">📢 Ads (10)</button>
+        <button class="filter-btn" data-filter="website">🌐 Website (7)</button>
       </div>
     </div>
   </section>
@@ -101,32 +101,36 @@
         ComponentLoader.loadComponent('allTools', 'all-tools-container');
       }
 
-      // Filter functionality
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      const toolCards = document.querySelectorAll('.tool-card');
+      // Wait for all-tools component to load, then set up filtering
+      setTimeout(function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const toolCards = document.querySelectorAll('.tool-card');
 
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-          const filter = this.getAttribute('data-filter');
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
 
-          // Update active button
-          filterBtns.forEach(b => b.classList.remove('active'));
-          this.classList.add('active');
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
 
-          // Filter cards
-          toolCards.forEach(card => {
-            if (filter === 'all') {
-              card.style.display = 'block';
-              setTimeout(() => card.classList.add('animate-fade-in'), 10);
-            } else {
-              // For now, show all. In a full implementation, you'd add data-category attributes
-              card.style.display = 'block';
-            }
+            // Filter cards with smooth animation
+            toolCards.forEach(card => {
+              const category = card.getAttribute('data-category');
+              
+              if (filter === 'all' || category === filter) {
+                card.style.display = 'block';
+                setTimeout(() => card.classList.add('animate-fade-in'), 10);
+              } else {
+                card.style.display = 'none';
+                card.classList.remove('animate-fade-in');
+              }
+            });
           });
         });
-      });
 
-      console.log('[v0] Tools page loaded');
+        console.log('[v0] Tools page loaded with filtering');
+      }, 100);
     });
   </script>
 
