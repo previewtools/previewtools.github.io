@@ -1,0 +1,42 @@
+{
+  "name": "Preview Tools Suite",
+  "short_name": "Preview Tools",
+  "description": "Preview your content across all social media platforms, email clients, search engines, and websites",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#0066ff",
+  "background_color": "#f5f3f0",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/favicon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/logo.jpg",
+      "type": "image/jpeg",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/images/logo.jpg",
+      "type": "image/jpeg",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "keywords": "preview, tools, social media, email, seo",
+  "screenshots_alt": "Preview Tools Suite interface showing various content preview options"
+}

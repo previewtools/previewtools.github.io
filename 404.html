@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page not found - Return to Preview Tools Suite homepage">
+  <meta name="robots" content="noindex, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="/images/favicon.jpg">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <title>404 - Page Not Found | Preview Tools Suite</title>
+
+  <style>
+    .error-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--background) 0%, rgba(0, 102, 255, 0.08) 100%);
+      text-align: center;
+      padding: var(--spacing-lg);
+    }
+
+    .error-code {
+      font-size: 6rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-purple) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: var(--spacing-md);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .error-title {
+      font-size: 2rem;
+      margin-bottom: var(--spacing-md);
+      color: var(--text-dark);
+    }
+
+    .error-description {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: var(--spacing-xl);
+      max-width: 500px;
+    }
+
+    .error-icon {
+      font-size: 4rem;
+      margin-bottom: var(--spacing-lg);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .error-actions {
+      display: flex;
+      gap: var(--spacing-md);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .error-actions .btn {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .error-code {
+        font-size: 4rem;
+      }
+
+      .error-title {
+        font-size: 1.5rem;
+      }
+
+      .error-icon {
+        font-size: 3rem;
+      }
+
+      .error-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .error-actions .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <div class="error-icon">🔍</div>
+    <div class="error-code">404</div>
+    <h1 class="error-title">Page Not Found</h1>
+    <p class="error-description">
+      Sorry! The page you're looking for doesn't exist. 
+      It might have been moved or deleted.
+    </p>
+
+    <div class="error-actions">
+      <a href="/" class="btn btn-primary">Back to Home</a>
+      <a href="/tools.html" class="btn btn-secondary">Explore Tools</a>
+    </div>
+
+    <div style="margin-top: var(--spacing-2xl); text-align: center; color: var(--text-light); font-size: 0.9rem;">
+      <p>Need help? Visit our homepage or check out all available tools.</p>
+    </div>
+  </div>
+</body>
+</html>

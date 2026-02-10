@@ -1,0 +1,244 @@
+<!-- All Tools Grid Component -->
+<section class="all-tools-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>All Available Tools</h2>
+      <p>Complete suite of preview tools for all your content needs</p>
+    </div>
+
+    <div class="tools-grid">
+      <!-- Social Media Category -->
+      <div class="tool-card" style="--card-color: #ff3366;">
+        <div class="card-icon">📱</div>
+        <h3>Instagram Post Preview</h3>
+        <p>Preview how your posts look on Instagram feed</p>
+        <a href="#" class="card-link">Try Now →</a>
+      </div>
+
+      <div class="tool-card" style="--card-color: #0066ff;">
+        <div class="card-icon">👨‍💼</div>
+        <h3>Facebook Post Preview</h3>
+        <p>See your content on Facebook timeline</p>
+        <a href="#" class="card-link">Try Now →</a>
+      </div>
+
+      <div class="tool-card" style="--card-color: #00d084;">
+        <div class="card-icon">🐦</div>
+        <h3>Twitter Post Preview</h3>
+        <p>Preview tweets and threads</p>
+        <a href="#" class="card-link">Try Now →</a>
+      </div>
+
+      <div class="tool-card" style="--card-color: #ffd700;">
+        <div class="card-icon">💼</div>
+        <h3>LinkedIn Post Preview</h3>
+        <p>Professional content preview for LinkedIn</p>
+        <a href="#" class="card-link">Try Now →</a>
+      </div>
+
+      <!-- Link Sharing Category -->
+      <div class="tool-card" style="--card-color: #9933ff;">
+        <div class="card-icon">🔗</div>
+        <h3>OpenGraph Preview</h3>
+        <p>Preview OG meta tags for social sharing</p>
+        <a href="#" class="card-link">Try Now →</a>
+      </div>
+
+      <div class="tool-card" style="--card-color: #ff9933;">
+        <div class="card-icon">🔄</div>
+        <h3>Twitter Card Preview</h3>
+        <p>Preview Twitter card metadata</p>
+        <a href="#" class="card-link">Try Now →</a>
+      </div>
+
+      <!-- SEO Category -->
+      <div class="tool-card" style="--card-color: #0066ff;">
+        <div class="card-icon">🔍</div>
+        <h3>Google SERP Preview</h3>
+        <p>See how your page appears in Google search</p>
+        <a href="#" class="card-link">Try Now →</a>
+      </div>
+
+      <div class="tool-card" style="--card-color: #ff3366;">
+        <div class="card-icon">📊</div>
+        <h3>Meta Tags Preview</h3>
+        <p>Analyze and preview all meta tags</p>
+        <a href="#" class="card-link">Try Now →</a>
+      </div>
+
+      <!-- Email Category -->
+      <div class="tool-card" style="--card-color: #00d084;">
+        <div class="card-icon">✉️</div>
+        <h3>Gmail Email Preview</h3>
+        <p>Preview emails as they appear in Gmail</p>
+        <a href="#" class="card-link">Try Now →</a>
+      </div>
+
+      <div class="tool-card" style="--card-color: #ffd700;">
+        <div class="card-icon">📧</div>
+        <h3>Outlook Email Preview</h3>
+        <p>Check email rendering in Outlook</p>
+        <a href="#" class="card-link">Try Now →</a>
+      </div>
+
+      <!-- Ad Category -->
+      <div class="tool-card" style="--card-color: #9933ff;">
+        <div class="card-icon">📢</div>
+        <h3>Google Ad Preview</h3>
+        <p>Preview Google Ads and their appearance</p>
+        <a href="#" class="card-link">Try Now →</a>
+      </div>
+
+      <div class="tool-card" style="--card-color: #ff9933;">
+        <div class="card-icon">🎯</div>
+        <h3>Facebook Ad Preview</h3>
+        <p>Preview ads on Facebook and Instagram</p>
+        <a href="#" class="card-link">Try Now →</a>
+      </div>
+
+      <!-- Website Category -->
+      <div class="tool-card" style="--card-color: #0066ff;">
+        <div class="card-icon">🌐</div>
+        <h3>Responsive Website Preview</h3>
+        <p>Check your website across all devices</p>
+        <a href="#" class="card-link">Try Now →</a>
+      </div>
+
+      <div class="tool-card" style="--card-color: #ff3366;">
+        <div class="card-icon">📱</div>
+        <h3>Mobile Website Preview</h3>
+        <p>Mobile-first responsive design preview</p>
+        <a href="#" class="card-link">Try Now →</a>
+      </div>
+
+      <div class="tool-card" style="--card-color: #00d084;">
+        <div class="card-icon">🖥️</div>
+        <h3>Desktop Website Preview</h3>
+        <p>Full desktop view preview</p>
+        <a href="#" class="card-link">Try Now →</a>
+      </div>
+
+      <div class="tool-card" style="--card-color: #ffd700;">
+        <div class="card-icon">🌍</div>
+        <h3>Browser Compatibility Preview</h3>
+        <p>Check compatibility across browsers</p>
+        <a href="#" class="card-link">Try Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.all-tools-section {
+  padding: var(--spacing-2xl) 0;
+  background: linear-gradient(180deg, var(--background) 0%, rgba(0, 102, 255, 0.05) 100%);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.tool-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: var(--spacing-xl);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid var(--card-color);
+}
+
+.tool-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--card-color) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.tool-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tool-card:hover::before {
+  opacity: 0.1;
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.tool-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-dark);
+}
+
+.tool-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.card-link {
+  display: inline-block;
+  color: var(--card-color);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--card-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.card-link:hover::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+}
+</style>

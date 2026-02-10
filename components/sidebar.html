@@ -1,0 +1,277 @@
+<!-- Sidebar Component -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <h3>Categories</h3>
+    <button class="sidebar-close" id="sidebarClose">✕</button>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <div class="category-group">
+      <h4>📱 Social Media</h4>
+      <ul>
+        <li><a href="#instagram">Instagram Post Preview</a></li>
+        <li><a href="#facebook">Facebook Post Preview</a></li>
+        <li><a href="#twitter">Twitter Post Preview</a></li>
+        <li><a href="#linkedin">LinkedIn Post Preview</a></li>
+        <li><a href="#tiktok">TikTok Video Preview</a></li>
+        <li><a href="#youtube">YouTube Video Preview</a></li>
+        <li><a href="#pinterest">Pinterest Pin Preview</a></li>
+      </ul>
+    </div>
+
+    <div class="category-group">
+      <h4>🔗 Link Sharing</h4>
+      <ul>
+        <li><a href="#opengraph">OpenGraph Preview</a></li>
+        <li><a href="#twitter-card">Twitter Card Preview</a></li>
+        <li><a href="#facebook-share">Facebook Share Preview</a></li>
+        <li><a href="#linkedin-share">LinkedIn Share Preview</a></li>
+      </ul>
+    </div>
+
+    <div class="category-group">
+      <h4>🔍 SEO</h4>
+      <ul>
+        <li><a href="#google-serp">Google SERP Preview</a></li>
+        <li><a href="#bing-serp">Bing SERP Preview</a></li>
+        <li><a href="#meta-tags">Meta Tags Preview</a></li>
+        <li><a href="#schema">Schema Markup Preview</a></li>
+      </ul>
+    </div>
+
+    <div class="category-group">
+      <h4>✉️ Email</h4>
+      <ul>
+        <li><a href="#gmail">Gmail Email Preview</a></li>
+        <li><a href="#outlook">Outlook Email Preview</a></li>
+        <li><a href="#apple-mail">Apple Mail Preview</a></li>
+        <li><a href="#newsletter">Email Newsletter Preview</a></li>
+      </ul>
+    </div>
+
+    <div class="category-group">
+      <h4>📢 Ads</h4>
+      <ul>
+        <li><a href="#google-ads">Google Ad Preview</a></li>
+        <li><a href="#facebook-ads">Facebook Ad Preview</a></li>
+        <li><a href="#instagram-ads">Instagram Ad Preview</a></li>
+        <li><a href="#tiktok-ads">TikTok Ad Preview</a></li>
+      </ul>
+    </div>
+
+    <div class="category-group">
+      <h4>🌐 Website</h4>
+      <ul>
+        <li><a href="#responsive">Responsive Website Preview</a></li>
+        <li><a href="#mobile">Mobile Website Preview</a></li>
+        <li><a href="#desktop">Desktop Website Preview</a></li>
+        <li><a href="#compatibility">Browser Compatibility Preview</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="sidebar-footer">
+    <button class="btn btn-primary" style="width: 100%;">Explore All Tools</button>
+  </div>
+</aside>
+
+<style>
+.sidebar {
+  position: fixed;
+  left: -350px;
+  top: 0;
+  width: 350px;
+  height: 100vh;
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  overflow-y: auto;
+  z-index: 99;
+  transition: left 0.3s ease;
+  padding-top: 80px;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 80px;
+  background: var(--white);
+  z-index: 10;
+}
+
+.sidebar-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text-dark);
+}
+
+.sidebar-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+  display: none;
+}
+
+.sidebar-close:hover {
+  color: var(--primary-blue);
+}
+
+.sidebar-nav {
+  padding: var(--spacing-lg);
+}
+
+.category-group {
+  margin-bottom: var(--spacing-xl);
+}
+
+.category-group h4 {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--border-light);
+}
+
+.category-group ul {
+  list-style: none;
+}
+
+.category-group li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.category-group a {
+  display: block;
+  padding: 8px var(--spacing-md);
+  color: var(--text-light);
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.category-group a:hover {
+  background: rgba(0, 102, 255, 0.05);
+  border-left-color: var(--primary-blue);
+  color: var(--primary-blue);
+  padding-left: calc(var(--spacing-md) + 4px);
+}
+
+.sidebar-footer {
+  padding: var(--spacing-lg);
+  border-top: 1px solid var(--border-light);
+  position: sticky;
+  bottom: 0;
+  background: var(--white);
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 98;
+}
+
+.sidebar-overlay.active {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    left: -100%;
+    padding-top: 60px;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .sidebar-close {
+    display: block;
+  }
+
+  .sidebar-nav {
+    padding: var(--spacing-md);
+  }
+
+  .category-group {
+    margin-bottom: var(--spacing-lg);
+  }
+}
+
+/* Scrollbar styling */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: var(--border-light);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-purple);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const sidebar = document.getElementById('sidebar');
+  const sidebarClose = document.getElementById('sidebarClose');
+  const sidebarOverlay = document.querySelector('.sidebar-overlay');
+
+  // Create overlay if it doesn't exist
+  if (!sidebarOverlay) {
+    const overlay = document.createElement('div');
+    overlay.className = 'sidebar-overlay';
+    document.body.appendChild(overlay);
+  }
+
+  // Close sidebar
+  if (sidebarClose) {
+    sidebarClose.addEventListener('click', function() {
+      sidebar.classList.remove('active');
+      document.querySelector('.sidebar-overlay').classList.remove('active');
+    });
+  }
+
+  // Close when clicking overlay
+  document.querySelector('.sidebar-overlay')?.addEventListener('click', function() {
+    sidebar.classList.remove('active');
+    this.classList.remove('active');
+  });
+
+  // Close when clicking sidebar links
+  const sidebarLinks = sidebar.querySelectorAll('a');
+  sidebarLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      sidebar.classList.remove('active');
+      document.querySelector('.sidebar-overlay').classList.remove('active');
+    });
+  });
+
+  // Make sidebar toggle available globally
+  window.toggleSidebar = function() {
+    sidebar.classList.toggle('active');
+    document.querySelector('.sidebar-overlay').classList.toggle('active');
+  };
+});
+</script>

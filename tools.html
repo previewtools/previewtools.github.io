@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore all 16+ preview tools in the Preview Tools Suite. From social media to email, SEO, ads, and website previews.">
+  <meta name="keywords" content="all preview tools, Instagram preview, Gmail preview, Google SERP, email preview, ad preview, website preview">
+  <meta name="author" content="Preview Tools Suite">
+  <meta name="theme-color" content="#0066ff">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="All Preview Tools - Preview Tools Suite">
+  <meta property="og:description" content="Browse all 16+ preview tools available in Preview Tools Suite.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://previewtools.github.io/tools.html">
+  <meta property="og:image" content="https://previewtools.github.io/images/logo.jpg">
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="All Preview Tools">
+  <meta name="twitter:description" content="Explore all preview tools for social media, email, SEO, and more.">
+  <meta name="twitter:image" content="https://previewtools.github.io/images/logo.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="/images/favicon.jpg">
+  <link rel="apple-touch-icon" href="/images/favicon.jpg">
+  
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/pages.css">
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://previewtools.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "All Tools",
+        "item": "https://previewtools.github.io/tools.html"
+      }
+    ]
+  }
+  </script>
+
+  <title>All Preview Tools - Preview Tools Suite</title>
+</head>
+<body>
+  <!-- Header Component -->
+  <div id="header-container"></div>
+
+  <!-- Sidebar Component -->
+  <div id="sidebar-container"></div>
+
+  <!-- Hero Section -->
+  <section class="tools-hero-section">
+    <div class="container">
+      <div class="section-header">
+        <h1>All Preview Tools</h1>
+        <p>16+ powerful tools to preview your content across all platforms</p>
+      </div>
+
+      <div class="tools-filter">
+        <button class="filter-btn active" data-filter="all">All Tools</button>
+        <button class="filter-btn" data-filter="social">📱 Social Media</button>
+        <button class="filter-btn" data-filter="links">🔗 Links</button>
+        <button class="filter-btn" data-filter="seo">🔍 SEO</button>
+        <button class="filter-btn" data-filter="email">✉️ Email</button>
+        <button class="filter-btn" data-filter="ads">📢 Ads</button>
+        <button class="filter-btn" data-filter="website">🌐 Website</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Tools Component -->
+  <div id="all-tools-container"></div>
+
+  <!-- Footer Component -->
+  <div id="footer-container"></div>
+
+  <!-- Component Loader Script -->
+  <script src="/js/component-loader.js"></script>
+
+  <!-- Tools Page Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load all-tools component
+      const ComponentLoader = window.ComponentLoader || {};
+      if (ComponentLoader.loadComponent) {
+        ComponentLoader.loadComponent('allTools', 'all-tools-container');
+      }
+
+      // Filter functionality
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const toolCards = document.querySelectorAll('.tool-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+
+          // Update active button
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+
+          // Filter cards
+          toolCards.forEach(card => {
+            if (filter === 'all') {
+              card.style.display = 'block';
+              setTimeout(() => card.classList.add('animate-fade-in'), 10);
+            } else {
+              // For now, show all. In a full implementation, you'd add data-category attributes
+              card.style.display = 'block';
+            }
+          });
+        });
+      });
+
+      console.log('[v0] Tools page loaded');
+    });
+  </script>
+
+  <style>
+    .tools-hero-section {
+      background: linear-gradient(135deg, var(--background) 0%, rgba(0, 102, 255, 0.08) 100%);
+      padding: calc(var(--spacing-xl) + 40px) 0 var(--spacing-xl);
+      text-align: center;
+    }
+
+    .tools-hero-section h1 {
+      font-size: 3rem;
+      margin-bottom: var(--spacing-md);
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-purple) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .tools-hero-section .section-header p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+    }
+
+    .tools-filter {
+      display: flex;
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-xl);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      border: 2px solid var(--border-light);
+      background: var(--white);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .filter-btn:hover {
+      border-color: var(--primary-blue);
+      color: var(--primary-blue);
+    }
+
+    .filter-btn.active {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-purple) 100%);
+      border-color: transparent;
+      color: var(--white);
+    }
+
+    @media (max-width: 768px) {
+      .tools-hero-section h1 {
+        font-size: 2rem;
+      }
+
+      .tools-filter {
+        gap: var(--spacing-sm);
+      }
+
+      .filter-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</body>
+</html>
